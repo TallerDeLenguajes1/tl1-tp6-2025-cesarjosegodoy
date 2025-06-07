@@ -33,3 +33,32 @@ while (opcion != "no")
     Console.WriteLine("\n\tDesea realizar otro Calculo (si/no):");
     opcion = Console.ReadLine();
 }
+
+// Ejercicio 4
+
+Console.WriteLine("Ingresa una oracion: ");
+string oracion = Console.ReadLine();
+Console.WriteLine("La longuitud de la oracion es: " + oracion.Length);
+Console.WriteLine("\nIngresa otra oracion: ");
+string oracion1 = Console.ReadLine();
+Console.WriteLine("\nLa oracion concatenada es:" + oracion + oracion1);
+Console.WriteLine("\nLa posicion de 'a' en la oracion es: " + (oracion.IndexOf('a') + 1));
+Console.WriteLine("\nArmo otra oracion sin la primera letra  : " + oracion[1..]);
+
+Console.WriteLine($"Los caracteres de {oracion} son: ");
+foreach (char c in oracion)
+{
+    Console.WriteLine(c);
+}
+Console.WriteLine($"\nLa oracion en mayusculas es '{oracion.ToUpper()}' y en minusculas es '{oracion.ToLower()}'");
+Console.WriteLine($"\nIngresa una cadena con la letra 'k' para separarla:");
+string cadena = Console.ReadLine();
+string[] partes = cadena.Split('k');
+Console.WriteLine("\nPartes de la cadena separadas por 'k':");
+foreach (string s in partes)
+{
+    Console.WriteLine(@$">{s}");
+}
+Console.WriteLine($"\nIngresa una operacion a realizar: ");
+int.TryParse(Console.ReadLine(), out int resultado);
+Console.WriteLine($"\nEl resultado de la operacion es {resultado}");

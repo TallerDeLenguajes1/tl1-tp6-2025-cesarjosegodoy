@@ -1,1 +1,3 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/24pP-Pw_)
+C# usa la palabra clave string para representar el tipo de datos de cadenas de texto. La palabra clave string es un alias para el tipo System.String. Por lo tanto, string y String son equivalentes.
+cuando se coloca el caracter @ y $ se puede ingresar variables dentro del mensaje de salida usando corchetes
