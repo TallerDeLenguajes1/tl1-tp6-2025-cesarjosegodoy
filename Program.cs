@@ -1,38 +1,35 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Ejercicio 2 CalculadoraV1
 
-int a;
+Console.WriteLine("\n\t\tCalculadora");
+string opcion = "";
 
-int b;
-
-a = 10;
-
-b = a;
-
-Console.WriteLine("valor de a:" + a);
-Console.WriteLine("valor de b:" + b);
-
-//Ejercicio 1
-
-Console.WriteLine("Ingrese un numero:");
-string entrada = Console.ReadLine();
-int num; 
-bool resultado = int.TryParse(entrada, out num);
-
-if (resultado && num > 0)
+while (opcion != "no")
 {
-    Console.WriteLine("Es un numero");
-    int invertido = 0;
-    while (num > 0)
+    Console.WriteLine("\n\t1. Sumar\n\t2. Restar\n\t3. Multiplicar\n\t4. Dividir\n\tIngresa un operacion a realizar:");
+
+    string operacion = Console.ReadLine();
+    Console.WriteLine("Ingrese el primer numero: ");
+    float n1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese el segundo numero: ");
+    float n2 = int.Parse(Console.ReadLine());
+    switch (operacion)
     {
-        int digito = num % 10;
-        invertido = (invertido * 10) + digito;
-        num /= 10;
+        case "1":
+            Console.WriteLine("\n\tLa suma de " + n1 + " con " + n2 + "  es: " + (n1 + n2).ToString());
+            break;
+        case "2":
+            Console.WriteLine("\n\tLa resta de " + n1 + " con " + n2 + "  es: " + (n1 - n2).ToString());
+            break;
+        case "3":
+            Console.WriteLine("\n\tLa multiplicacion de " + n1 + " con " + n2 + "  es: " + (n1 * n2).ToString());
+            break;
+        case "4":
+            Console.WriteLine("\n\tLa division de " + n1 + " con " + n2 + "  es: " + (n1 / n2).ToString());
+            break;
+        default:
+            Console.WriteLine("\n\tOPcion invalida..");
+            break;
     }
-    Console.WriteLine(invertido);
-
-}
-else
-{
-    Console.WriteLine("No es un numero");
+    Console.WriteLine("\n\tDesea realizar otro Calculo (si/no):");
+    opcion = Console.ReadLine();
 }
