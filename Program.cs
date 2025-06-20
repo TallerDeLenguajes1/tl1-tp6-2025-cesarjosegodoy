@@ -35,4 +35,6 @@ if (resultado && num > 0)
 else
 {
     Console.WriteLine("No es un numero");
+    
+;
 }
